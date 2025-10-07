@@ -9,8 +9,11 @@ export async function updateSession(request: NextRequest) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
+  // If env vars are missing, allow request through without auth check
+  // This prevents middleware from crashing the entire app on Vercel
   if (!url || !key) {
-    throw new Error('Missing Supabase environment variables');
+    console.warn('Missing Supabase environment variables - authentication disabled');
+    return supabaseResponse;
   }
 
   const supabase = createServerClient(url, key, {
