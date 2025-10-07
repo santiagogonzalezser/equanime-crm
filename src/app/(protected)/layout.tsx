@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "EQUÁNIME CRM",
   description: "Modern CRM solution for managing client relationships",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default async function ProtectedLayout({

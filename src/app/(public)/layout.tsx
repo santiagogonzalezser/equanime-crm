@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "EQUÁNIME CRM - Nuevo Cliente",
   description: "Formulario de registro de clientes",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function PublicLayout({

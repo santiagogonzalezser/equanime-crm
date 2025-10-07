@@ -10,6 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import Image from 'next/image';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Progress } from '@/components/ui/progress';
@@ -1041,8 +1042,18 @@ export default function AddClientForm() {
   return (
     <Card className="max-w-4xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold text-gray-900">
-          Agregar nuevo cliente
+        {/* ARIA logo centered */}
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/logos/aria.png"
+            alt="ARIA"
+            width={200}
+            height={67}
+            className="h-auto w-auto max-h-16"
+          />
+        </div>
+        <CardTitle className="text-2xl font-bold text-black">
+          Nuevo cliente
         </CardTitle>
         <div className="space-y-2 mt-4">
           <div className="flex justify-between text-sm text-gray-600">
