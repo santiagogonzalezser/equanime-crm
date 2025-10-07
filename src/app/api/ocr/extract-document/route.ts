@@ -197,6 +197,7 @@ REMEMBER: Return ONLY the JSON object. No markdown, no explanation, no code bloc
 
     // Extract detailed error information
     if (error && typeof error === 'object') {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const err = error as any;
       console.error('Error message:', err.message);
       console.error('Error status:', err.status);
