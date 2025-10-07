@@ -23,7 +23,8 @@ describe('CRMLayout', () => {
   test('renders sidebar navigation', () => {
     render(<CRMLayout>content</CRMLayout>);
     expect(screen.getByText('Dashboard')).toBeInTheDocument();
-    expect(screen.getByText('Clients')).toBeInTheDocument();
+    expect(screen.getByText('Tablas')).toBeInTheDocument();
+    expect(screen.getByText('Agregar Cliente')).toBeInTheDocument();
   });
 
   test('AI Agent button is present', () => {

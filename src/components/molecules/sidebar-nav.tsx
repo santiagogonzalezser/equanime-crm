@@ -3,9 +3,6 @@
 import {
   BarChart3,
   Users,
-  Settings,
-  FileText,
-  Mail,
   UserPlus
 } from 'lucide-react';
 import NavItem from '@/components/atoms/nav-item';
@@ -27,22 +24,6 @@ const navItems: SidebarNavItem[] = [
     title: 'Agregar Cliente',
     href: '/clientes/nuevo',
     icon: UserPlus,
-  },
-  {
-    title: 'Reportes',
-    href: '/reports',
-    icon: FileText,
-  },
-  {
-    title: 'Mensajes',
-    href: '/messages',
-    icon: Mail,
-    badge: '3',
-  },
-  {
-    title: 'Configuración',
-    href: '/settings',
-    icon: Settings,
   },
 ];
 
